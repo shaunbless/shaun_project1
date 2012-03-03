@@ -1,0 +1,396 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/appstyles.css" type="text/css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+	<!-- home page -->
+     <div data-role="page" id="home">
+			<div data-role="header" data-position="fixed">
+				
+				<h1>Shaun's Repair</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true">
+					<li data-theme="a">
+						<a href="#login">
+							<img src="images/login.jpg" />
+							<h3>Login</h3>
+							<p>Access Your Account</p>
+						</a>
+					</li>
+					<p>
+					   <img src= "images/hyundai.png"/>         
+				    </p>
+					<li data-theme="a">
+						<a href="#register">
+							<img src="images/register.png" />
+							<h3>Register</h3>
+							<p>Register With Us</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			test github
+			<div data-role="footer" data-position="fixed">
+				<h4>We Repair Your Cars</h4>
+			</div>
+		
+		</div>
+		
+		<!-- account page -->
+		<div data-role="page" id="account">
+			<div data-role="header" data-position="fixed">
+			    <img src="images/Shaun-Auto.png" />
+				<h1>My Account</h1>
+			</div>
+			
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">						
+							<a href="#info" data-role="button" data-theme="a">
+								<img src="images/appointmenticon.jpg" />
+								<p>Make</p>
+								<p>Appointment</p>
+							</a>
+						</div>
+						<div class="ui-block-b">
+							<a href="#register" data-role="button" data-theme="a">
+								<img src="images/servicesicon.jpg" />
+								<p>View</p>
+								<p>Services</p>
+							</a>
+						</div>
+						<div data-role="fieldcontain">
+							<a href="#history" data-role="button" data-theme="a">
+								<img src="images/historyicon.jpg" />
+								<p>Appointment</p>
+								<p>History</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		
+		<!-- appointment page -->
+		<div data-role="page" id="info">
+			<div data-role="header" data-position="fixed">
+			<img src="images/Shaun-Auto.png" />
+				<h1>Make Appointment</h1>
+			</div>
+			
+			<div data-role="content">
+			<nav>
+				<a href="#" id="displayLink">Display Stored Data</a>
+				<a href="#" id="clear">Clear Stored Data</a>
+				<a href="index.html" id="add">Add More Data</a>
+			</nav>
+				<form action="#account" method="post" id="info">
+				<ul id="errors"></ul>				
+				<ul>
+					<li>
+						<label for="fname">First Name:</label><input type="text" placeholder= John id="fname"/>
+					</li>
+					<li>
+						<label for="lname">Last  Name:</label><input type="text" placeholder= Smith id="lname" />
+					</li>
+					<li>
+						<label for="pword">Password:</label><input type="Password" placeholder= fixnicecar123 id="pword"/>
+					</li>
+					<li>
+						<label for="pwordCfirm">Password Confirm[Disabled]:</label>
+						<input type="Password" placeholder="fixnicecar123" id="pwordCfirm" disabled /></li>
+					<li>
+						<label for="cty">City:</label><input type="text" id="cty"/>
+					</li>
+					<li>
+						<label for="st">State:</label><input type="text" id="st"/>
+					</li>
+					<li>
+						<label for="ctry"> Country:</label><input type="text" id="ctry"/>
+					</li>
+					<li id="sex"><label>Gender:</label>
+						<input id="male" name="male" type="radio">
+						<label for="male">Male</label>
+						<input id="female" name="female" type="radio">
+						<label for="female">female</label>
+					</li>
+					<li>
+						<label for="email">Email:</label><input type="email" id="email" placeholder="youremail@email.com" class="required email"/> 
+					</li>               
+					<!-- add alert if miles are serviced once user gains 3000 addition miles alert returns time to change oil -->
+					<li>
+						<label for="miles">Mileage ?:</label><input type="text" name="miles" id="miles"/>
+					</li>
+					<!-- add javascript that searches for avaible dates and time if available return message
+					to user example: Friday at 9 oclock is available-->
+					<li>
+						<label for="time">Time ?</label> <input type="text" id="time" name="user_date" />
+					</li>
+					<li id="select"><label>My Repair Person:</label></li> 
+				</ul>
+				<input type="submit" value="Done" id="submit" href="#account" />
+		</form>
+			</div>
+		
+			<div data-role="footer">
+				
+			</div>
+		</div>
+		
+		<!-- services page -->
+		<div data-role="page" id="services">
+			<div data-role="header" data-position="fixed">
+			<img src="images/Shaun-Auto.png" />
+				<h1>Our Services</h1>
+			</div>
+			
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<div class="ui-grid-b">
+						<div class="ui-block-a">
+							<a href="#" data-role="button" data-theme="a">
+								<img src="images/carrepairicon.jpg" />
+								<p>Car</p>
+								<p>Repair</p>
+							</a>
+						</div>
+						<div class="ui-block-b">
+							<a href="#" data-role="button" data-theme="a">
+								<img src="images/oilicon.jpg" />
+								<p>Oil</p>
+								<p>Change</p>
+							</a>
+						</div>
+						<div class="ui-block-c">
+							<a href="#" data-role="button" data-theme="a">
+								<img src="images/carpainticon.jpg"
+								<p>Paint</p>
+								<p>Service</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed">
+				
+			</div>
+		</div>
+		
+		<!-- history page -->
+		<div data-role="page" id="history">
+			<div data-role="header" data-position="fixed">
+			    <img src="images/Shaun-Auto.png" />
+				<h1>Your History</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul data-role="listview" data-filter="true">	
+					<li>
+						<img src="images/paintlist.jpg" />
+						<h3>January 14, 2012</h3>
+						<p>Car Painting Service, Oil Change</p>
+						<p>Metallic Blue Paint</p>
+						<p>$1050.00</p>
+					</li>
+					
+					<li>
+						<img src="images/repairlist.jpg" />
+						<h3>November 17, 2011</h3>
+						<p>Car Repair Service</p>
+						<p>Replacing Alternator</p>
+						<p>$1500.00</p>
+					</li>
+					
+					<li>
+						<img src="images/oillist.jpg" />
+						<h3>October 15, 2011</h3>
+						<p>Oil Change</p>
+						<p>40W Pensoil Oil Change</p>
+						<p>$50.00</p>
+					</li>
+					
+					<li>
+						<img src="images/oillist.jpg" />
+						<h3>August 14, 2011</h3>
+						<p>Oil Change</p>
+						<p>40W Pensoil Oil Change</p>
+						<p>$50.00</p>
+					</li>
+				</ul>
+			</div>
+		
+			<div data-role="footer" data-position="fixed">
+				
+			</div>
+		</div>
+		
+		<!-- login page -->
+		<div data-role="page" id="login">
+			<div data-role="header" data-position="fixed">
+			    <img src="images/Shaun-Auto.png" />
+				<h1>Log In Here</h1>
+			</div>
+			
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label for="username">Username</label><input for="username" type="text" id="username" name="username" value="" />
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="password">Password</label><input for="password" type="password" id="password" name="password" value="" />
+				</div>
+				
+				<a href="#account" data-role="button">Login</a>
+			</div>
+		</div>
+		
+		<!-- register page -->
+		<div data-role="page" id="register">
+			<div data-role="header" data-position="fixed">
+			    <img src="images/Shaun-Auto.png" />
+				<h1>Register Here</h1>
+			</div>
+			
+			<div data-role="content">
+				<form action="" method="post" id="regform">
+					<div data-role="fieldcontain">
+						<label for="fname">First Name</label><input for="fname" type="text" id="fname" name="fname" value="" class="required" placeholder="first name" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="lname">Last Name</label><input for="lname" type="text" id="lname" name="lname" value="" class="required" placeholder="last name" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="email">Email Address</label><input for="email" type="text" id="email" name="email" value="" class="required email" placeholder="example@email.com" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="phnumber">Phone Number</label><input for="phnumber" type="text" id="phnumber" name="phnumber" class="required" value="" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<div class="ui-grid-b">
+						<div class="ui-block-a">
+							<label for="month">Month</label>
+							<select name="month" id="month" data-native-menu="false">
+							<option data-placeholder="true">M</option>
+							<optgroup label="Month">
+								<option value="Jan">Jan</option>
+								<option value="Feb">Feb</option>
+								<option value="Mar">Mar</option>
+								<option value="Apr">Apr</option>
+								<option value="May">May</option>
+								<option value="Jun">Jun</option>
+								<option value="Jul">Jul</option>
+								<option value="Aug">Aug</option>
+								<option value="Sep">Sep</option>
+								<option value="Oct">Oct</option>
+								<option value="Nov">Nov</option>
+								<option value="Dec">Dec</option>
+							</optgroup>
+							</select>
+						</div>
+						<div class="ui-block-b">
+							<label for="day">Day</label>
+							<select name="day" id="day" data-native-menu="false">
+							<option data-placeholder="true">D</option>
+							<optgroup label="Day">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</optgroup>
+							</select>
+						</div>
+						<div class="ui-block-c">
+							<label for="year">Year</label>
+							<input type="number" id="year" name="year" for="year" value="" placeholder="2012" />
+						</div>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="uname">Username</label><input for="uname" type="text" id="uname" name="uname" value="" placeholder="username" />
+						<label for="pass">Password</label><input for="pass" type="number" id="pass" name="pass" value="" placeholder="password" />
+					</div>
+					<div data-role="fieldcontain">
+						<input type="submit" value="Submit" data-theme="a" />
+					</div>
+					<a href="#signuperrors" id="rberrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+				</form>
+			</div>
+		</div>
+		
+		<!-- signup error page -->
+		<div data-role="dialog" id="signuperrors">
+			<div data-role="header" data-position="fixed">
+				<h1>Missing fields!</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul>
+					<li>Test</li>
+				</ul>
+			</div>
+		</div>
+
+
+	<!-- JavaScript under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

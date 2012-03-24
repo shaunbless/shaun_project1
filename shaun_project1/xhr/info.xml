@@ -1,0 +1,50 @@
+<clients>
+	<client>
+		<title>Client 1</title>
+		<miles>300,000</miles>
+		<name>tj johnson</name>
+		<email>tj@gmail.com</email>
+		<username>tj</username>
+		<password>pass1234</password>
+		<phone>555-999-8765</phone>
+	</client>
+	<client>
+		<title>Client 2</title>
+		<miles>300,000</miles>
+		<name>tj johnson</name>
+		<email>tj@gmail.com</email>
+		<username>tj</username>
+		<password>pass1234</password>
+		<phone>555-999-8765</phone>
+	</client>
+	<client>
+		<title>Client 3</title>
+		<miles>300,000</miles>
+		<name>tj johnson</name>
+		<email>tj@gmail.com</email>
+		<username>tj</username>
+		<password>pass1234</password>
+		<phone>555-999-8765</phone>
+	</client>
+	<client>
+		<title>Client 4</title>
+		<miles>300,000</miles>
+		<name>tj johnson</name>
+		<email>tj@gmail.com</email>
+		<username>tj</username>
+		<password>pass1234</password>
+		<phone>555-999-8765</phone>
+	</client>
+	<client>
+		<title>Client 5</title>
+		<miles>300,000</miles>
+		<name>tj johnson</name>
+		<email>tj@gmail.com</email>
+		<username>tj</username>
+		<password>pass1234</password>
+		<phone>555-999-8765</phone>
+	</client>
+
+
+</clients>
+    

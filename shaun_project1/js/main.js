@@ -136,3 +136,39 @@ $('#csvdata').on('click', function(){
 	});
 	return false;
 });
+
+// XML List
+$('#xmldata').on('click', function(){
+	$('#data').empty();
+	$('<p>').html('XML Data Imported').appendTo('#data');
+	$.ajax({
+		url: 'xhr/info.xml',
+		type: 'GET',
+		dataType: 'xml',
+		success: function(xml){
+			$(xml).find("client").each(function(){
+				console.log($(xml).find("client"));
+				var title = $(this).find('title').text();
+				var miles = $(this).find('miles').text();
+				var name = $(this).find('name').text();
+				var email = $(this).find('email').text();
+				var username = $(this).find('username').text();
+				var password = $(this).find('password').text();
+				var phone = $(this).find('phone').text();
+				$(''+
+				'<div class="datainfo">'+
+				'<p>'+ title +'</p>'+
+				'<p>Miles: '+ miles +'</p>'+
+				'<p>Name: '+ name +'</p>'+
+				'<p>Email: '+ email +'</p>'+
+				'<p>Username: '+ username +'</p>'+
+				'<p>Password: '+ password +'</p>'+
+				'<p>Phone: '+ phone +'</p>'+
+				'</div>'
+			).appendTo('#data');
+				console.log(xml);
+			});
+		}
+	});
+	return false;
+});
